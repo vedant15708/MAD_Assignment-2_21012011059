@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.vedantpansuriya.mad_assignment_2_21012011059"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.vedantpansuriya.mad_assignment_2_21012011059"
