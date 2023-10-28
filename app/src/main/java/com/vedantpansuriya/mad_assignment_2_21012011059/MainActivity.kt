@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
             adapter.notifyDataSetChanged()
             true
         }
+        val setReminderButton = findViewById<Button>(R.id.setReminderButton)
+        setReminderButton.setOnClickListener {
+            showDateTimePicker(Task("", false))
+        }
     }
     private fun addTask() {
         val taskEditText = findViewById<EditText>(R.id.taskInput)
@@ -52,22 +56,19 @@ class MainActivity : AppCompatActivity() {
     private fun setReminderForTask(context: Context, task: Task, reminderTimeMillis: Long) {
         task.reminder = reminderTimeMillis
 
-        // Create an intent that will be triggered when the reminder fires
         val intent = Intent(context, ReminderBroadcastReceiver::class.java)
-        intent.putExtra("task_name", task.name)  // Include task name in the intent for notification
+        intent.putExtra("task_name", task.name)
 
         val pendingIntent = PendingIntent.getBroadcast(
             context,
-            task.hashCode(),  // Use a unique ID for each task to distinguish between reminders
+            task.hashCode(),
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT
         )
 
-        // Schedule the reminder using AlarmManager
-        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, reminderTimeMillis, pendingIntent)
 
-        // Display a notification when the reminder fires
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        alarmManager.setExact(AlarmManager.RTC, reminderTimeMillis, pendingIntent)
         createNotificationChannel(context)
         showNotification(context, task.name)
     }
