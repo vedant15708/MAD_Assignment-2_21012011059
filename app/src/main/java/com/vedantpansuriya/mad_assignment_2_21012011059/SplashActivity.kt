@@ -17,18 +17,17 @@ class SplashActivity : AppCompatActivity() {
 
         animation.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {
-                // Animation started (you can add code here if needed)
+
             }
 
             override fun onAnimationEnd(animation: Animation) {
-                // Animation ended, start MainActivity
                 val intent = Intent(this@SplashActivity, MainActivity::class.java)
                 startActivity(intent)
-                finish() // Close the splash screen activity
+                finish()
             }
 
             override fun onAnimationRepeat(animation: Animation) {
-                // Animation repeated (if needed)
+
             }
         })
 
