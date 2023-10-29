@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary">#3F51B5</color> <!-- Primary color -->
-    <color name="colorAccent">#FF4081</color> <!-- Accent color -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="lightpurple">#CBC3E3</color>
+
 </resources>

@@ -20,14 +20,13 @@
         android:textColor="@color/colorPrimary"
         android:layout_marginTop="16dp"/>
 
-    <!-- Task Input -->
     <EditText
         android:id="@+id/taskInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter a new task"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/colorAccent"/>
+        android:backgroundTint="@color/lightpurple"/>
 
     <!-- Priority Spinner -->
     <Spinner
@@ -35,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/colorAccent"/>
+        android:backgroundTint="@color/lightpurple"/>
 
 
     <Button
@@ -43,9 +42,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Task"
+        android:textColor="@color/black"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/colorAccent"/>
+        android:backgroundTint="@color/lightpurple"/>
 
 
     <ListView
