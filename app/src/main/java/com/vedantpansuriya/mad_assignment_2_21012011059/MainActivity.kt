@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         taskEditText = findViewById(R.id.taskInput)
         prioritySpinner = findViewById(R.id.prioritySpinner)
 
-        // Set up the Spinner
+
         val priorityOptions = resources.getStringArray(R.array.priority_options)
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, priorityOptions)
         prioritySpinner.adapter = spinnerAdapter
@@ -50,7 +50,6 @@ class MainActivity : AppCompatActivity() {
         if (taskName.isNotEmpty()) {
             val newTask = Task(taskName, false, priorityInt)
 
-            // Find the appropriate position to insert the task based on priority
             var insertIndex = 0
             while (insertIndex < tasks.size && tasks[insertIndex].priority >= priorityInt) {
                 insertIndex++
@@ -71,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             "High" -> 2
             "Medium" -> 1
             "Low" -> 0
-            else -> 1 // Default to Medium if the priority is not recognized
+            else -> 1
         }
     }
 }
