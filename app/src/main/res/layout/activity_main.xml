@@ -47,11 +47,11 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/lightpurple"/>
 
-
     <ListView
         android:id="@+id/taskList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="16dp"/>
+
 
 </LinearLayout>

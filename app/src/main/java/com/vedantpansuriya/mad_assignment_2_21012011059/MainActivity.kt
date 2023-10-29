@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity() {
             taskEditText.text.clear()
         }
     }
-
     private fun removeTask(position: Int) {
         tasks.removeAt(position)
         adapter.notifyDataSetChanged()
