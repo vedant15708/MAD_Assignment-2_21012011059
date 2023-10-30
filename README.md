@@ -1,7 +1,9 @@
-Overview
+Overview:
+
 The "To-Do List" app is a straightforward and efficient task management application designed to help you organize and keep track of your daily tasks and responsibilities. It provides a simple and user-friendly platform to enhance your productivity and assist you in managing your to-do items effectively.
 
-Features
+Features:
+
 -Logo Animation: Enjoy a captivating logo animation at the start of the app
 
 -Task List Management: Easily add and delete tasks to maintain a clear and up-to-date to-do list.
